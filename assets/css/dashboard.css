@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 900px;
+    margin-top: 80px; /* Add margin to avoid clipping */
+    padding: 20px;
+}
+
+.dashboard-header {
+    background-color: #b0302f;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+    flex: 1;
+}
+
+.header-user-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto 0 20px;
+    padding: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.welcome-message {
+    font-size: 16px;
+    margin: 0;
+    margin-right: auto;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.logout-button {
+    background-color: #b0302f; /* Main color */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+    white-space: nowrap; /* Prevent text wrapping */
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #912323; /* Slightly darker for hover */
+    text-decoration: underline;
+}
+
+.dashboard-main {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-main h2 {
+    color: #b0302f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dashboard-link {
+    background-color: #b0302f; /* Main color */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+    flex: 1 1 calc(25% - 40px);
+    max-width: 200px;
+}
+
+.dashboard-link:hover {
+    background-color: #912323; /* Slightly darker for hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}

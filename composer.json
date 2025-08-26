@@ -1,0 +1,5 @@
+{
+    "require": {
+        "clarifai/clarifai-php-grpc": "^11.7"
+    }
+}

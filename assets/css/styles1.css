@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header (Navigation Bar) */
+header {
+    background-color: #b0302f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fix the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Keep it above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Ensure proper alignment of icons */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative; /* Ensure proper alignment */
+}
+
+.search-box {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cart-icon, .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto; /* Push the menu icon to the far right */
+}
+
+/* Add padding to the main content to avoid overlap with the fixed header */
+main {
+    padding: 100px 20px 20px; /* Add top padding to account for the fixed header */
+}
+
+.latest {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.latest h2, .filters {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.product-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.product-price {
+    color: #b0302f;
+    font-size: 1.2em;
+}
+
+.camera-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #b0302f;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+        /* Para sa items */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .product {
+            background-color: white;
+            width: 220px; 
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; 
+            border-radius: 5px;
+        }
+        .product-name {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .product-price {
+            color: #b0302f;
+            font-size: 1.2em;
+        }
+
+        /* Media query for small devices */
+        @media (max-width: 600px) {
+            .product {
+                width: 45%;
+            }
+        }
+
+        /*para sa profile icon*/
+
+        .profile-icon {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-icon button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .profile-dropdown a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .profile-dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .profile-icon:hover .profile-dropdown,
+        .profile-icon:focus-within .profile-dropdown {
+            display: block;
+        }
+
+
+        /*para sa sidebar*/
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%; 
+            width: 250px;
+            height: 100%;
+            background-color: #b0302f;
+            color: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); 
+            transition: right 0.3s ease; 
+            padding: 20px;
+            z-index: 2000; /* Ensure it is above everything, including the header */
+        }
+
+        .sidebar.active {
+            right: 0; 
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 1999; /* Below the sidebar but above other content */
+        }
+
+        .overlay.active {
+            display: block; 
+        }
+
+
+/*login css*/
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #b0302f; /* Match homepage primary color */
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #b0302f; /* Match homepage primary color */
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #912323; /* Slightly darker shade for hover */
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .forgot-password a {
+            color: #b0302f; /* Match homepage primary color */
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: #ff0000;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .back-to-login {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .back-to-login a {
+            color: #b0302f; /* Match homepage primary color */
+            text-decoration: none;
+        }
+        .back-to-login a:hover {
+            text-decoration: underline;
+        }
+        /*sub cats */
+        .submenu {
+            padding-left: 20px;
+            display: none;
+        }
+        .submenu li {
+            list-style: none;
+        }
+        .submenu.show {
+            display: block;
+        }
+
+.sort-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #b0302f;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 2000; /* Ensure it is above everything, including the header */
+}
+
+.sidebar.active {
+    right: 0; /* Show the sidebar when active */
+}
+
+/* Sidebar Menu Button */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed; /* Ensure the button stays in place */
+    top: 15px; /* Align with the header */
+    right: 15px; /* Position it on the right */
+    z-index: 1001; /* Above the sidebar */
+}
+
+/* Overlay for Sidebar */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1999; /* Below the sidebar but above other content */
+}
+
+.overlay.active {
+    display: block;
+}

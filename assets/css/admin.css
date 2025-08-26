@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    padding-top: 120px !important; /* Increased padding to avoid navbar overlap */
+}
+
+.admin-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 20px; /* Remove top margin since body has enough padding */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header {
+    background-color: #b0302f;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Button styles */
+.btn {
+    background-color: #b0302f; /* Main color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #912323; /* Slightly darker for hover */
+}
+
+.admin-main {
+    margin-top: 0; /* Remove top margin since container now handles spacing */
+    padding: 20px;
+}
+
+.admin-main h2 {
+    color: #b0302f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.admin-main select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.success-message, .error-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.products-main {
+    margin-top: 20px; /* Reduce the margin to remove the large blank space */
+    padding: 20px; /* Keep padding for proper spacing */
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+.status.pending {
+    background-color: #ffc107; /* Yellow */
+}
+
+.status.shipped {
+    background-color: #17a2b8; /* Blue */
+}
+
+.status.delivered {
+    background-color: #28a745; /* Green */
+}
+
+.status.cancelled {
+    background-color: #dc3545; /* Red */
+}
